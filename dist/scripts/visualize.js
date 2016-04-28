@@ -1,13 +1,13 @@
 "use strict";
 var visualizeRidesByWeekday = function(ridesByWeekDay) {
-  var w = 500,
-      h = 200;
+  var w = 800,
+      h = 210;
   var margin = {
     top: 20,
     right: 20,
     bottom: 24,
     left: 20,
-    middle: 24
+    middle: 36
   };
   var regionWidth = w / 2 - margin.middle;
   var pointA = regionWidth,
@@ -46,16 +46,27 @@ var visualizeRidesByWeekday = function(ridesByWeekDay) {
   svg.append('g').attr('class', 'axis y right').attr('transform', translation(pointB, 0)).call(yAxisRight);
   svg.append('g').attr('class', 'axis x left').attr('transform', translation(0, h)).call(xAxisLeft);
   svg.append('g').attr('class', 'axis x right').attr('transform', translation(pointB, h)).call(xAxisRight);
+  var tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
   leftBarGroup.selectAll('.bar.left').data(ridesByWeekday).enter().append('rect').attr('class', 'bar left fill-subscriber').attr('x', 0).attr('y', function(d) {
     return yScale(d.group);
   }).attr('width', function(d) {
     return xScale(subscriberPercentage(d.subscriber));
-  }).attr('height', yScale.rangeBand());
+  }).attr('height', yScale.rangeBand()).on("mouseover", function(d) {
+    tooltip.transition().duration(200).style("opacity", 1.0);
+    tooltip.html(d.subscriber + " rides (" + (subscriberPercentage(d.subscriber) * 100).toFixed(2) + "%)").style("left", (d3.event.pageX - 100) + "px").style("top", (d3.event.pageY - 28) + "px");
+  }).on("mouseout", function(d) {
+    tooltip.transition().duration(500).style("opacity", 0);
+  });
   rightBarGroup.selectAll('.bar.right').data(ridesByWeekday).enter().append('rect').attr('class', 'bar right fill-customer').attr('x', 0).attr('y', function(d) {
     return yScale(d.group);
   }).attr('width', function(d) {
     return xScale(customerPercentage(d.customer));
-  }).attr('height', yScale.rangeBand());
+  }).attr('height', yScale.rangeBand()).on("mouseover", function(d) {
+    tooltip.transition().duration(200).style("opacity", 1.0);
+    tooltip.html(d.customer + " rides (" + (subscriberPercentage(d.customer) * 100).toFixed(2) + "%)").style("left", (d3.event.pageX + 5) + "px").style("top", (d3.event.pageY - 28) + "px");
+  }).on("mouseout", function(d) {
+    tooltip.transition().duration(500).style("opacity", 0);
+  });
   function translation(x, y) {
     return 'translate(' + x + ',' + y + ')';
   }

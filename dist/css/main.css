@@ -1,30 +1,38 @@
 body {
-  font: 0.7em sans-serif;
-  background-color: #FFFFFF; }
+  font: 1em sans-serif;
+  background-color: #FFFFFF;
+  padding-bottom: 30px; }
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center; }
 
 svg {
   display: block;
-  margin: auto; }
+  margin: auto;
+  font: 1.2em sans-serif; }
 
 header {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #00bdf1;
+  background-color: white;
   z-index: 100;
   padding-bottom: 20px; }
+
+.chart-section {
+  margin-bottom: 20px; }
 
 #content {
   padding-top: 300px; }
 
 .title {
-  color: white; }
+  color: #0F2105; }
 
-.role p {
-  font-size: 1.8em; }
+.role li {
+  list-style: none;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  text-align: center; }
 
 .axis path,
 .axis line {
@@ -43,9 +51,10 @@ header {
 
 .tooltip {
   position: absolute;
-  width: 200px;
   height: 28px;
-  pointer-events: none; }
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px; }
 
 .arc text {
   font: 10px sans-serif;

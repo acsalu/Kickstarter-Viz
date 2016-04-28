@@ -12,54 +12,65 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 class="title">The Two Faces on Citi Bikes</h1>
-          <a href="https://www.citibikenyc.com/system-data" target="_blank">Source: Citi Bike System Data</a>
-          <p>Online exchange behavior</p>
-           <!-- <div id="canvas" class="col-lg-12"> -->
-          <div id="role-subscriber" class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4 col-sm-offset-2 col-sm-4 role">
-            <h3>Subscriber</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati debitis incidunt iure iste, sapiente tempora tempore autem voluptatibus reiciendis eveniet dolores earum, quas rerum cum totam maiores illo vero possimus accusantium sint est. Pariatur quas distinctio natus, possimus deleniti. Tempore architecto eligendi sint voluptas harum tempora provident, odit minus deserunt.</p>
-          </div>
-          <div id="role-customer" class="col-lg-4 col-md-4 col-sm-4 role">
-            <h3>Customer</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dolore quod optio, harum dolor. Ipsam officiis, nam architecto sequi. Sunt eius aperiam reprehenderit nisi? Quisquam dolorem quaerat dolore? Similique minus eveniet, maiores! At culpa voluptatem ratione fugiat voluptas, ut libero est soluta. Reprehenderit cum rem iusto sit distinctio soluta, error.</p>
-          </div>
+          <a href="https://www.citibikenyc.com/system-data" target="_blank" style="text-align: center; display: block;">Source: Citi Bike System Data</a>
         </div>
+        <div id="role-subscriber" class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4 col-sm-offset-2 col-sm-4 role">
+          <h3>Subscriber</h3>
+          <ul>
+            <li>We pay $155/year or $14.95/month to get unlimited 45 miniute rides.</li>
+            <li>We get a unique key to unlock bicycles from the docking system.</li>
+            <li>We are people living in New York City.</li>
+          </ul>
         </div>
-      </header>
+        <div id="role-customer" class="col-lg-4 col-md-4 col-sm-4 role">
+          <h3>Customer</h3>
+          <ul>
+            <li>We pay $9.95 for 24-Hours or $25 for 7-Day rides under 30 miniutes.</li>
+            <li>We use ride codes (from kiosks) to unlock the bicycles.</li>
+            <li>We are mostly tourists.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <div id="content" class="container">
-    <div class="row">
-      <h4>Composition</h4>
+    <div class="row chart-section">
+      <h4>User Composition</h4>
       <div id="canvas-pie" class="col-lg-offset-4 col-lg-4">
       </div>
     </div>
 
-    <div class="row">
+    <div class="row chart-section">
       <div class="col-lg-12">
-        <div id="slider"></div>
+        <h4>Average Ride Duration (Minutes)</h4>
       </div>
-      <div class="col-lg-12">
-        <h4># of Rides by WeekDay</h4>
-      </div>
-      <div id="canvas" class="col-lg-offset-2 col-lg-8">
+      <div id="canvas-avg-duration" class="col-lg-12">
       </div>
     </div>
 
-    <div class="row">
+    <div class="row chart-section">
+        <div class="col-lg-12">
+          <h4>% of Rides Daily Breakdown</h4>
+        </div>
+        <div id="canvas" class="col-lg-12">
+        </div>
+    </div>
+
+    <div class="row chart-section">
       <div class="col-lg-12">
-        <div id="slider"></div>
+        <h4>Overtime Fee per Ride (USD)</h4>
       </div>
-      <div class="col-lg-12">
-        <h4>Average Ride Duration</h4>
-      </div>
-      <div id="canvas-avg-duration" class="col-lg-offset-2 col-lg-8">
+      <div id="canvas-additiona-fee" class="col-lg-12">
       </div>
     </div>
+
   </div>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="dist/lib/d3.slider.js" charset="utf-8"></script>
   <script src="dist/scripts/visualize.js"></script>
   <script src="dist/scripts/visualize-avg-duration.js"></script>
+  <script src="dist/scripts/visualize-fee.js"></script>
   <script src="dist/scripts/visualize-pie.js"></script>
 </body>
 </html>
