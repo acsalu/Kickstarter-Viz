@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Two Faces on Citi Bikes</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body> 
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="title">The Two Faces on Citi Bikes</h1>
+          <a href="https://www.citibikenyc.com/system-data" target="_blank">Source: Citi Bike System Data</a>
+          <p>Online exchange behavior</p>
+           <!-- <div id="canvas" class="col-lg-12"> -->
+          <div id="role-subscriber" class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4 col-sm-offset-2 col-sm-4 role">
+            <h3>Subscriber</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati debitis incidunt iure iste, sapiente tempora tempore autem voluptatibus reiciendis eveniet dolores earum, quas rerum cum totam maiores illo vero possimus accusantium sint est. Pariatur quas distinctio natus, possimus deleniti. Tempore architecto eligendi sint voluptas harum tempora provident, odit minus deserunt.</p>
+          </div>
+          <div id="role-customer" class="col-lg-4 col-md-4 col-sm-4 role">
+            <h3>Customer</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dolore quod optio, harum dolor. Ipsam officiis, nam architecto sequi. Sunt eius aperiam reprehenderit nisi? Quisquam dolorem quaerat dolore? Similique minus eveniet, maiores! At culpa voluptatem ratione fugiat voluptas, ut libero est soluta. Reprehenderit cum rem iusto sit distinctio soluta, error.</p>
+          </div>
+        </div>
+        </div>
+      </header>
+
+  <div id="content" class="container">
+    <div class="row">
+      <h4>Composition</h4>
+      <div id="canvas-pie" class="col-lg-offset-4 col-lg-4">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="slider"></div>
+      </div>
+      <div class="col-lg-12">
+        <h4># of Rides by WeekDay</h4>
+      </div>
+      <div id="canvas" class="col-lg-offset-2 col-lg-8">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="slider"></div>
+      </div>
+      <div class="col-lg-12">
+        <h4>Average Ride Duration</h4>
+      </div>
+      <div id="canvas-avg-duration" class="col-lg-offset-2 col-lg-8">
+      </div>
+    </div>
+  </div>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="dist/lib/d3.slider.js" charset="utf-8"></script>
+  <script src="dist/scripts/visualize.js"></script>
+  <script src="dist/scripts/visualize-avg-duration.js"></script>
+  <script src="dist/scripts/visualize-pie.js"></script>
+</body>
+</html>

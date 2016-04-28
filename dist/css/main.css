@@ -1,0 +1,133 @@
+body {
+  font: 0.7em sans-serif;
+  background-color: #FFFFFF; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center; }
+
+svg {
+  display: block;
+  margin: auto; }
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #00bdf1;
+  z-index: 100;
+  padding-bottom: 20px; }
+
+#content {
+  padding-top: 300px; }
+
+.title {
+  color: white; }
+
+.role p {
+  font-size: 1.8em; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges; }
+
+.dot {
+  stroke: #000; }
+
+.dot-successful {
+  fill: #2BDE73; }
+
+.dot-failed {
+  fill: #0F2105; }
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none; }
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle; }
+
+.arc path {
+  stroke: #fff; }
+
+.fill-subscriber {
+  fill: #2BDE73; }
+
+.fill-customer {
+  fill: #00bdf1; }
+
+.d3-slider {
+  position: relative;
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 1.1em;
+  border: 1px solid #aaaaaa;
+  z-index: 2; }
+
+.d3-slider-horizontal {
+  height: 2.0em; }
+
+.d3-slider-range {
+  background: #2980b9;
+  left: 0px;
+  right: 0px;
+  height: 0.8em;
+  position: absolute; }
+
+.d3-slider-range-vertical {
+  background: #2980b9;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  top: 0; }
+
+.d3-slider-vertical {
+  width: .8em;
+  height: 100px; }
+
+.d3-slider-handle {
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  background: #eee;
+  background: linear-gradient(to bottom, #eee 0%, #ddd 100%);
+  z-index: 3; }
+
+.d3-slider-handle:hover {
+  border: 1px solid #999999; }
+
+.d3-slider-horizontal .d3-slider-handle {
+  top: -.3em;
+  margin-left: -.6em; }
+
+.d3-slider-axis {
+  position: relative;
+  z-index: 1; }
+
+.d3-slider-axis-bottom {
+  top: .8em; }
+
+.d3-slider-axis-right {
+  left: .8em; }
+
+.d3-slider-axis path {
+  stroke-width: 0;
+  fill: none; }
+
+.d3-slider-axis line {
+  fill: none;
+  stroke: #aaa;
+  shape-rendering: crispEdges; }
+
+.d3-slider-axis text {
+  font-size: 11px; }
+
+.d3-slider-vertical .d3-slider-handle {
+  left: -.25em;
+  margin-left: 0;
+  margin-bottom: -.6em; }
